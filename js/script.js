@@ -9,49 +9,61 @@ const aleatorioBtn = document.getElementById("aleatorio");
 
 const emociones = {
     feliz: {
-        img: "img/feliz.jpg",
-        music: "img/feliz.mp3",
-        texto: "Hay momentos en los que todo pesa menos."
+        img: "img/feliz.png",
+        music: "audio/feliz.mp3",
+        texto: "Hay momentos en los que todo pesa menos.",
+        color: "#FFD93D"
     },
     triste: {
-        img: "img/triste.jpg",
-        music: "img/triste.mp3",
-        texto: "Sentirse así también forma parte del camino."
+        img: "img/triste.png",
+        music: "audio/triste.mp3",
+        texto: "Sentirse así también forma parte del camino.",
+        color: "#2E4057"
     },
     calma: {
-        img: "img/calma.jpg",
-        music: "img/calma.mp3",
-        texto: "Respirar es suficiente, por ahora."
+        img: "img/calma.png",
+        music: "audio/calma.mp3",
+        texto: "Respirar es suficiente, por ahora.",
+        color: "#6BCB77"
     },
     energia: {
-        img: "img/energia.jpg",
-        music: "img/energia.mp3",
-        texto: "El cuerpo pide movimiento."
+        img: "img/energia.png",
+        music: "audio/energia.mp3",
+        texto: "El cuerpo pide movimiento.",
+        color: "#FF6B6B"
     },
     nostalgia: {
-        img: "img/nostalgia.jpg",
-        music: "img/nostalgia.mp3",
-        texto: "Recordar también es sentir."
+        img: "img/nostalgia.png",
+        music: "audio/nostalgia.mp3",
+        texto: "Recordar también es sentir.",
+        color: "#C8A2C8"
     },
     ansiedad: {
-        img: "img/ansiedad.jpg",
-        music: "img/ansiedad.mp3",
-        texto: "No todo tiene que resolverse hoy."
+        img: "img/ansiedad.png",
+        music: "audio/ansiedad.mp3",
+        texto: "No todo tiene que resolverse hoy.",
+        color: "#845EC2"
     }
 };
 
 function cambiarEmocion(emocion) {
+
     imagen.style.opacity = 0;
     mensaje.style.opacity = 0;
 
     setTimeout(() => {
+
         imagen.src = emociones[emocion].img;
         musica.src = emociones[emocion].music;
         mensaje.textContent = emociones[emocion].texto;
 
+        document.body.style.background = emociones[emocion].color;
+
         musica.play();
+
         imagen.style.opacity = 1;
         mensaje.style.opacity = 1;
+
     }, 300);
 }
 
