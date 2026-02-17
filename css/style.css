@@ -1,3 +1,11 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +16,18 @@ body {
     font-family: system-ui, sans-serif;
     background: #0b0b0b;
     color: #f1f1f1;
+    transition: background 0.8s ease, color 0.5s ease;
+    overflow-x: hidden;
 }
 
-/* HERO */
+section {
+    padding: 100px 12%;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
     height: 100vh;
     background: url("../img/hero.jpg") center / cover no-repeat;
@@ -20,78 +37,124 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.85));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
 .hero-overlay h1 {
     font-size: 4rem;
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
-/* SECCIONES */
-section {
-    padding: 100px 15%;
+.hero-overlay p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    opacity: 0.8;
 }
 
-.intro, .reflexion {
+.hero-overlay span {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+/* =========================
+   INTRO / REFLEXIÓN
+========================= */
+
+.intro,
+.reflexion {
     background: #111;
 }
 
-.cierre {
-    background: #0b0b0b;
-    text-align: center;
-    font-style: italic;
+.intro h2,
+.reflexion h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
 }
 
-/* EMOCIONES */
+.intro p,
+.reflexion p {
+    line-height: 1.7;
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   EMOCIONES
+========================= */
+
 .emociones {
-    background: #0b0b0b;
     text-align: center;
+}
+
+.emociones h2 {
+    margin-bottom: 50px;
+    font-size: 2rem;
 }
 
 .emociones-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    margin: 40px 0;
+    margin-bottom: 40px;
 }
 
 .card {
-    height: 160px;
-    background: linear-gradient(135deg, #1a1a1a, #0e0e0e);
+    height: 180px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #1c1c1c, #111);
     border: 1px solid #222;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: 0.4s;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    background: white;
-    color: black;
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
 }
 
+.card.activa {
+    outline: 2px solid white;
+    transform: scale(1.08);
+}
+
+/* BOTÓN ALEATORIO */
+
 #aleatorio {
-    margin-top: 30px;
     padding: 15px 30px;
     background: none;
     border: 1px solid #444;
     color: white;
     cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease;
 }
 
-/* ESCENA */
+#aleatorio:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* =========================
+   ESCENA
+========================= */
+
 .escena {
-    height: 80vh;
-    background: black;
+    height: 90vh;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.8), black);
     padding: 0;
+    position: relative;
 }
 
 .escena-overlay {
@@ -107,28 +170,64 @@ section {
 
 #imagen {
     width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 1s ease;
 }
 
 #mensaje {
-    margin-top: 20px;
+    margin-top: 25px;
     max-width: 600px;
     opacity: 0.8;
+    font-size: 1.05rem;
+    transition: opacity 0.6s ease;
+}
+
+/* CONTROLES */
+
+.controles {
+    margin-top: 30px;
 }
 
 .controles button {
-    margin: 15px 10px;
-    padding: 10px 20px;
+    margin: 10px;
+    padding: 12px 25px;
     background: none;
     border: 1px solid #444;
     color: white;
     cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* FOOTER */
+.controles button:hover {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.05);
+}
+
+/* =========================
+   CIERRE
+========================= */
+
+.cierre {
+    text-align: center;
+    font-style: italic;
+    background: #0b0b0b;
+}
+
+.cierre p {
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     padding: 30px;
     text-align: center;
-    opacity: 0.6;
+    opacity: 0.5;
+    font-size: 0.9rem;
 }

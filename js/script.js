@@ -7,6 +7,8 @@ const playBtn = document.getElementById("play");
 const pauseBtn = document.getElementById("pause");
 const aleatorioBtn = document.getElementById("aleatorio");
 
+musica.volume = 0.4; // volumen inicial
+
 const emociones = {
     feliz: {
         img: "img/feliz.png",
@@ -46,12 +48,30 @@ const emociones = {
     }
 };
 
+function fadeOutAudio(callback) {
+    let fade = setInterval(() => {
+        if (musica.volume > 0.05) {
+            musica.volume -= 0.05;
+        } else {
+            clearInterval(fade);
+            musica.pause();
+            musica.volume = 0.4;
+            callback();
+        }
+    }, 50);
+}
+
 function cambiarEmocion(emocion) {
 
+    // Marcar card activa
+    cards.forEach(c => c.classList.remove("activa"));
+    document.querySelector(`[data-emocion="${emocion}"]`)?.classList.add("activa");
+
+    // Fade imagen y texto
     imagen.style.opacity = 0;
     mensaje.style.opacity = 0;
 
-    setTimeout(() => {
+    fadeOutAudio(() => {
 
         imagen.src = emociones[emocion].img;
         musica.src = emociones[emocion].music;
@@ -63,8 +83,7 @@ function cambiarEmocion(emocion) {
 
         imagen.style.opacity = 1;
         mensaje.style.opacity = 1;
-
-    }, 300);
+    });
 }
 
 cards.forEach(card => {

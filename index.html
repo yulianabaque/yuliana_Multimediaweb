@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Emociones & Música</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon (opcional pero recomendado) -->
+    <link rel="icon" href="img/favicon.png">
 </head>
 <body>
 
@@ -13,7 +18,7 @@
         <div class="hero-overlay">
             <h1>Emociones & Música</h1>
             <p>Una experiencia multimedia basada en cómo te sientes</p>
-            <span>No todos sentimos igual. Aquí tampoco.</span>
+            <span>Explora. Cambia. Siente.</span>
         </div>
     </header>
 
@@ -21,18 +26,18 @@
     <section class="intro">
         <h2>Sobre esta experiencia</h2>
         <p>
-            Esta web no está pensada para ser usada de una sola forma.
+            Esta web no está pensada para usarse de una sola forma.
             Hay personas que entran con una emoción clara, y otras que no.
-            Algunas solo escuchan música. Otras miran, leen o cambian varias veces.
+            Algunas solo escuchan música. Otras exploran diferentes estados.
         </p>
         <p>
-            Aquí no hay decisiones correctas. Solo estados.
+            Aquí no hay decisiones correctas. Solo emociones.
         </p>
     </section>
 
     <!-- EMOCIONES -->
     <section class="emociones">
-        <h2>Elige una emoción</h2>
+        <h2>Elige cómo te sientes</h2>
 
         <div class="emociones-grid">
             <div class="card" data-emocion="feliz">Felicidad</div>
@@ -46,17 +51,22 @@
         <button id="aleatorio">No lo sé / Sorpréndeme</button>
     </section>
 
-    <!-- ESCENA -->
+    <!-- ESCENA EMOCIONAL -->
     <section class="escena">
         <div class="escena-overlay">
             <div class="contenido-escena">
-                <img id="imagen" src="img/feliz.png" alt="emocion">
-                <p id="mensaje"></p>
+
+                <img id="imagen" src="img/feliz.png" alt="Emoción actual">
+
+                <p id="mensaje">
+                    Selecciona una emoción para comenzar la experiencia.
+                </p>
 
                 <div class="controles">
                     <button id="play">▶ Reproducir</button>
                     <button id="pause">⏸ Pausar</button>
                 </div>
+
             </div>
         </div>
     </section>
@@ -65,10 +75,7 @@
     <section class="reflexion">
         <h2>Un momento para parar</h2>
         <p>
-            No hace falta interactuar todo el tiempo.
-            A veces solo quedarse aquí un rato ya es suficiente.
-        </p>
-        <p>
+            No hace falta interactuar constantemente.
             Puedes cambiar de emoción, bajar el volumen o simplemente dejar la música.
         </p>
     </section>
@@ -76,21 +83,23 @@
     <!-- CIERRE -->
     <section class="cierre">
         <p>
-            Esta web no guarda datos.
-            No analiza emociones.
-            No intenta entenderte.
+            Esta web no guarda datos ni analiza emociones.
         </p>
         <p>
             Solo cambia contigo.
         </p>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <p>Proyecto Web Multimedia · HTML · CSS · JavaScript</p>
     </footer>
 
-    <audio id="musica" loop></audio>
+    <!-- AUDIO -->
+    <audio id="musica" preload="auto" loop></audio>
 
+    <!-- JS -->
     <script src="js/script.js"></script>
+
 </body>
 </html>
