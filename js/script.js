@@ -7,7 +7,7 @@ const playBtn = document.getElementById("play");
 const pauseBtn = document.getElementById("pause");
 const aleatorioBtn = document.getElementById("aleatorio");
 
-musica.volume = 0.4; // volumen inicial
+musica.volume = 0.4;
 
 const emociones = {
     feliz: {
@@ -63,11 +63,9 @@ function fadeOutAudio(callback) {
 
 function cambiarEmocion(emocion) {
 
-    // Marcar card activa
     cards.forEach(c => c.classList.remove("activa"));
     document.querySelector(`[data-emocion="${emocion}"]`)?.classList.add("activa");
 
-    // Fade imagen y texto
     imagen.style.opacity = 0;
     mensaje.style.opacity = 0;
 

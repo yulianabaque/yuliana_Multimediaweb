@@ -1,7 +1,3 @@
-/* =========================
-   RESET & BASE
-========================= */
-
 html {
     scroll-behavior: smooth;
 }
@@ -24,9 +20,6 @@ section {
     padding: 100px 12%;
 }
 
-/* =========================
-   HERO
-========================= */
 
 .hero {
     height: 100vh;
@@ -64,9 +57,6 @@ section {
     opacity: 0.5;
 }
 
-/* =========================
-   INTRO / REFLEXIÓN
-========================= */
 
 .intro,
 .reflexion {
@@ -85,10 +75,6 @@ section {
     opacity: 0.85;
     margin-bottom: 15px;
 }
-
-/* =========================
-   EMOCIONES
-========================= */
 
 .emociones {
     text-align: center;
@@ -130,7 +116,6 @@ section {
     transform: scale(1.08);
 }
 
-/* BOTÓN ALEATORIO */
 
 #aleatorio {
     padding: 15px 30px;
@@ -146,9 +131,6 @@ section {
     background: rgba(255,255,255,0.1);
 }
 
-/* =========================
-   ESCENA
-========================= */
 
 .escena {
     height: 90vh;
@@ -206,10 +188,6 @@ section {
     transform: scale(1.05);
 }
 
-/* =========================
-   CIERRE
-========================= */
-
 .cierre {
     text-align: center;
     font-style: italic;
@@ -221,9 +199,6 @@ section {
     opacity: 0.7;
 }
 
-/* =========================
-   FOOTER
-========================= */
 
 footer {
     padding: 30px;
