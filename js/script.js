@@ -72,6 +72,7 @@ function cambiarEmocion(emocion) {
     fadeOutAudio(() => {
 
         imagen.src = emociones[emocion].img;
+        imagen.alt = "Imagen que representa la emoción de " + emocion;
         musica.src = emociones[emocion].music;
         mensaje.textContent = emociones[emocion].texto;
 
