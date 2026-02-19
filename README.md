@@ -23,3 +23,8 @@ Lo solucioné haciendo que el atributo alt cambie dinámicamente según la emoci
 5.
 Añadí la etiqueta <main> para definir claramente el contenido principal de la página y mejorar la estructura semántica.
 
+6.
+Cuando cambiaba la emoción, el fondo cambiaba de color pero el texto no siempre se veía bien, sobre todo cuando el fondo era claro.
+Lo solucioné haciendo que el color del texto cambie automáticamente según el fondo para que siempre tenga buen contraste.
+
+También cambié el color del texto dentro de las tarjetas porque era negro sobre fondo oscuro y casi no se veía.

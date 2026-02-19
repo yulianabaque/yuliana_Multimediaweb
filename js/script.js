@@ -78,6 +78,12 @@ function cambiarEmocion(emocion) {
 
         document.body.style.background = emociones[emocion].color;
 
+        if (emocion === "feliz" || emocion === "calma" || emocion === "nostalgia") {
+            document.body.style.color = "#111";
+        } else {
+            document.body.style.color = "#f1f1f1";
+        }
+
         musica.play();
 
         imagen.style.opacity = 1;
