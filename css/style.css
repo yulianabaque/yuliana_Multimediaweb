@@ -12,7 +12,7 @@ body {
     font-family: system-ui, sans-serif;
     background: #0b0b0b;
     color: #f1f1f1;
-    transition: background 0.8s ease, color 0.5s ease;
+    transition: background 0.8s ease;
     overflow-x: hidden;
 }
 
@@ -20,6 +20,7 @@ section {
     padding: 100px 12%;
 }
 
+/* HERO */
 
 .hero {
     height: 100vh;
@@ -37,6 +38,7 @@ section {
     align-items: center;
     text-align: center;
     padding: 20px;
+    color: #f1f1f1;
 }
 
 .hero-overlay h1 {
@@ -57,10 +59,12 @@ section {
     opacity: 0.5;
 }
 
+/* SECCIONES OSCURAS */
 
 .intro,
 .reflexion {
     background: #111;
+    color: #f1f1f1;
 }
 
 .intro h2,
@@ -75,6 +79,8 @@ section {
     opacity: 0.85;
     margin-bottom: 15px;
 }
+
+/* EMOCIONES */
 
 .emociones {
     text-align: center;
@@ -117,12 +123,13 @@ section {
     transform: scale(1.08);
 }
 
+/* BOTÓN ALEATORIO */
 
 #aleatorio {
     padding: 15px 30px;
     background: none;
     border: 1px solid #444;
-    color: white;
+    color: #f1f1f1;
     cursor: pointer;
     border-radius: 30px;
     transition: background 0.3s ease;
@@ -132,6 +139,7 @@ section {
     background: rgba(255,255,255,0.1);
 }
 
+/* ESCENA */
 
 .escena {
     height: 90vh;
@@ -145,6 +153,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #f1f1f1;
 }
 
 .contenido-escena {
@@ -178,7 +187,7 @@ section {
     padding: 12px 25px;
     background: none;
     border: 1px solid #444;
-    color: white;
+    color: #f1f1f1;
     cursor: pointer;
     border-radius: 30px;
     transition: background 0.3s ease, transform 0.3s ease;
@@ -189,10 +198,13 @@ section {
     transform: scale(1.05);
 }
 
+/* CIERRE */
+
 .cierre {
     text-align: center;
     font-style: italic;
     background: #0b0b0b;
+    color: #f1f1f1;
 }
 
 .cierre p {
@@ -200,13 +212,18 @@ section {
     opacity: 0.7;
 }
 
+/* FOOTER */
 
 footer {
     padding: 30px;
     text-align: center;
     opacity: 0.5;
     font-size: 0.9rem;
+    background: #0b0b0b;
+    color: #f1f1f1;
 }
+
+/* FOCO ACCESIBLE */
 
 button:focus,
 .card:focus {

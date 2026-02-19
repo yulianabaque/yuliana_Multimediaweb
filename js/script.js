@@ -78,12 +78,6 @@ function cambiarEmocion(emocion) {
 
         document.body.style.background = emociones[emocion].color;
 
-        if (emocion === "feliz" || emocion === "calma" || emocion === "nostalgia") {
-            document.body.style.color = "#111";
-        } else {
-            document.body.style.color = "#f1f1f1";
-        }
-
         musica.play();
 
         imagen.style.opacity = 1;
@@ -103,5 +97,14 @@ aleatorioBtn.addEventListener("click", () => {
     cambiarEmocion(random);
 });
 
-playBtn.addEventListener("click", () => musica.play());
-pauseBtn.addEventListener("click", () => musica.pause());
+playBtn.addEventListener("click", () => {
+    musica.play();
+    playBtn.setAttribute("aria-pressed", "true");
+    pauseBtn.setAttribute("aria-pressed", "false");
+});
+
+pauseBtn.addEventListener("click", () => {
+    musica.pause();
+    playBtn.setAttribute("aria-pressed", "false");
+    pauseBtn.setAttribute("aria-pressed", "true");
+});

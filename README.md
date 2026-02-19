@@ -28,3 +28,6 @@ Cuando cambiaba la emoción, el fondo cambiaba de color pero el texto no siempre
 Lo solucioné haciendo que el color del texto cambie automáticamente según el fondo para que siempre tenga buen contraste.
 
 También cambié el color del texto dentro de las tarjetas porque era negro sobre fondo oscuro y casi no se veía.
+
+7.
+Añadí un atributo aria-pressed a los botones de reproducir y pausar para indicar cuál está activo en cada momento. Así, si alguien usa lector de pantalla, puede saber si la música está reproduciéndose o está en pausa.
