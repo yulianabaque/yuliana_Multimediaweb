@@ -19,3 +19,7 @@ Para solucionarlo añadí aria-live="polite" al mensaje dinámico para que los c
 4.
 La imagen siempre tenía el mismo alt aunque cambiara la emoción.
 Lo solucioné haciendo que el atributo alt cambie dinámicamente según la emoción seleccionada.
+
+5.
+Añadí la etiqueta <main> para definir claramente el contenido principal de la página y mejorar la estructura semántica.
+
