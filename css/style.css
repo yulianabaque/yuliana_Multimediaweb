@@ -206,3 +206,9 @@ footer {
     opacity: 0.5;
     font-size: 0.9rem;
 }
+
+button:focus,
+.card:focus {
+    outline: 3px solid #FFD93D;
+    outline-offset: 4px;
+}
